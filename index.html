@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reunion Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background: #34495e;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background: #ecf0f1;
+    }
+    .page {
+      display: none;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .page.active {
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .photo {
+      background: #ddd;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button.submit {
+      background: #2c3e50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Class Reunion</h1>
+  <p>We're excited to see everyone again!</p>
+</header>
+
+<nav>
+  <button onclick="showPage('info')">Info</button>
+  <button onclick="showPage('photos')">Photos</button>
+  <button onclick="showPage('qa')">Q & A</button>
+  <button onclick="showPage('details')">Your Details</button>
+</nav>
+
+<div id="info" class="page active">
+  <h2>Reunion Information</h2>
+  <p><strong>Date:</strong> June 15, 2026</p>
+  <p><strong>Location:</strong> City Hall Banquet Room</p>
+  <p><strong>Dress Code:</strong> Casual / Semi-formal</p>
+  <p>We can't wait to reconnect and reminisce!</p>
+</div>
+
+<div id="photos" class="page">
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+    <div class="photo">Photo</div>
+    <div class="photo">Photo</div>
+    <div class="photo">Photo</div>
+    <div class="photo">Photo</div>
+  </div>
+</div>
+
+<div id="qa" class="page">
+  <h2>Questions & Answers</h2>
+  <p><strong>Who can attend?</strong><br>All classmates and a guest.</p>
+  <p><strong>Is there a cost?</strong><br>$40 per person.</p>
+  <p><strong>How do I RSVP?</strong><br>Fill out the form below.</p>
+</div>
+
+<div id="details" class="page">
+  <h2>Your Details</h2>
+  <input type="text" placeholder="Your Name" />
+  <input type="email" placeholder="Email Address" />
+  <textarea placeholder="Dietary needs or message"></textarea>
+  <button class="submit">Submit</button>
+</div>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
