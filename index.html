@@ -24,8 +24,57 @@
       padding: 10px;
       flex-wrap: wrap;
     }
-    #home {
+   /* HERO HOME PAGE */
+#home {
   text-align: center;
+  padding: 40px 30px;
+}
+
+/* Main title */
+#home h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+/* Date & location */
+#home .event-meta {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Save the Date badge */
+.save-date {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Hero text */
+#home p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 18px auto;
+}
+
+/* Poll link emphasis */
+#home .poll-link a {
+  display: inline-block;
+  background: #2c3e50;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#home .poll-link a:hover {
+  background: #1a252f;
 }
     nav button {
       background: white;
@@ -99,48 +148,56 @@
   <button onclick="showPage('QandA')">Q & A</button>
 </nav>
 
-<div id="Home" class="page active">
-  <h2>Welcome Berkowitz Group Alumni! 🎉</h2>
-<h2>Berkowitz Group Alumni Reunion 🎉</h2>
-<p><strong>June 12–14, 2026 | University of Nebraska–Lincoln</strong></p>
+<div id="home" class="page active">
 
-<p>
-  <strong>Save the date!</strong> We’re excited to welcome Berkowitz Group alumni back to UNL for a
-  three-day reunion celebrating <strong>35 years of research, mentorship, and community</strong>.
-  This special gathering brings together alumni from across generations to reconnect, reflect,
-  and celebrate the lasting impact of the Berkowitz Group.
-</p>
+  <h2>Berkowitz Group Alumni Reunion 🎉</h2>
 
-<p>
-  The weekend will feature <strong>alumni research talks</strong>, <strong>networking and social events</strong>,
-  and a <strong>banquet dinner</strong>, along with plenty of opportunities to reconnect with fellow
-  alumni and UNL Chemistry faculty and staff.
-</p>
+  <div class="event-meta">
+    June 12–14, 2026 | University of Nebraska–Lincoln
+  </div>
 
-<p>
-  <strong>All former members of the Berkowitz Group are warmly invited</strong>, regardless of when you
-  were part of the group. To help us plan, please take a few minutes to complete our short planning
-  poll — even if you’re unsure about attending in person.
-</p>
+  <div class="save-date">
+    Save the Date
+  </div>
 
-<p>
-  👉 <a href=" https://forms.gle/Z85MwA4KKd25DR8w5" target="_blank">
-    Complete the planning poll
-  </a>
-  <br />
- <p><strong>Deadline to respond:</strong> January 30, 2025. Your participation ensures we plan an event that everyone will enjoy.</p>
+  <p>
+    We’re excited to welcome Berkowitz Group alumni back to UNL for a
+    three-day reunion celebrating <strong>35 years of research, mentorship,
+    and community</strong>. This gathering brings together alumni from across
+    generations to reconnect, reflect, and celebrate the lasting impact of
+    the Berkowitz Group.
+  </p>
 
-</p>
+  <p>
+    The weekend will feature <strong>alumni research talks</strong>,
+    <strong>networking and social events</strong>, and a
+    <strong>banquet dinner</strong>, along with opportunities to reconnect
+    with fellow alumni and UNL Chemistry faculty and staff.
+  </p>
 
-<p>
-  For questions or ideas, please contact
-  <strong>Prof. Berkowitz, Aina Antony, Albert Chris, or Chathurika Usliyanage</strong>.
-</p>
+  <p>
+    All former members of the Berkowitz Group are warmly invited, regardless
+    of when you were part of the group.
+  </p>
 
-<p>
-  <strong>We look forward to celebrating together — we hope to see you in Lincoln in June 2026!</strong>
-</p>
+  <p class="poll-link">
+    👉 <a href="https://forms.gle/Z85MwA4KKd25DR8w5" target="_blank">
+      Complete the planning poll
+    </a><br>
+    <em>Please respond by November 30, 2025.</em>
+  </p>
+
+  <p>
+    Questions or ideas? Please contact
+    <strong>Prof. Berkowitz, Aina Antony, Chris, or Chathurika</strong>.
+  </p>
+
+  <p>
+    <strong>We hope to see you in Lincoln in June 2026!</strong>
+  </p>
+
 </div>
+
 
 <div id="photos" class="page">
   <h2>Photo Gallery</h2>
@@ -190,6 +247,7 @@ who have completed the planning poll and those who have not yet responded.  </p>
 
 </body>
 </html>
+
 
 
 
